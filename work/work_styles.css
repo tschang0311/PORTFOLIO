@@ -1,0 +1,79 @@
+/* NAVIGATION BAR */
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.topnav a.left {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 60px;
+}
+.topnav a.right {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 60px;
+}
+.topnav a:hover {
+    background-color: black;
+    color: white;
+}
+.topnav a.active {
+    background-color: black;
+    color: white;
+}
+
+/* EVERYTHING BUT THE KITCHEN SINK */
+.sink {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 40px;
+}
+
+/* Photo Grid */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    flex: auto;
+    padding-top: 150px;
+}
+.column {
+    flex: 1;
+    text-align: center;
+    padding: 0 10px 0 10px;
+}
+.column img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 10px;
+}
+.column .image-container {
+    position: relative;
+    display: inline-block;
+}
+.column .image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-decoration: none;
+}
+.column .image-container:hover .image-caption {
+    opacity: .9;
+}

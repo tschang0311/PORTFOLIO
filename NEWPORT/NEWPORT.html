@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>NEWPORT</title>
+        <link rel="stylesheet" href="./NEWPORT_styles.css">
+    </head>
+
+    <body>
+
+        <!-- NAVIGATION BAR -->
+        <div class="topnav">
+            <a class="left" href="./../index.html">THOMAS CHANG</a>
+            <a class="right" href="./../work/work.html">WORK</a>
+            <a class="right" href="./../about/about.html">ABOUT</a>
+        </div>
+
+        <h2 class="content">NEWPORT</h2>
+
+        <!-- Image Carousel -->
+        <div class="carousel-container">
+            <button class="button" onclick="prevSlide()">{</button>
+            <div>
+                <div class="carousel-slide">
+                    <img src="./NEWPORT_images/pointbreak.png">
+                    <div class="caption">POINT_BREAK</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./NEWPORT_images/Mussels.png">
+                    <div class="caption">MUSSELS</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./NEWPORT_images/hanginout.png">
+                    <div class="caption">HANG_n_OUT</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./NEWPORT_images/pushnpull.png">
+                    <div class="caption">PUSH_n_PULL</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./NEWPORT_images/sunnhorizon.png">
+                    <div class="caption">SUN_n_HORIZON</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./NEWPORT_images/halfnhalf.png">
+                    <div class="caption">HALF_n_HALF</div>
+                </div>
+            </div>
+            <button class="button" onclick="nextSlide()">}</button>
+        </div>
+
+
+        <script>
+            let slideIndex = 0;
+
+            function prevSlide() {
+                const slides = document.getElementsByClassName("carousel-slide");
+                slideIndex--;
+                if (slideIndex < 0) {
+                    slideIndex = slides.length - 1;
+                }
+                showSlides(slideIndex);
+            }
+            function nextSlide() {
+                const slides = document.getElementsByClassName("carousel-slide");
+                slideIndex++;
+                if (slideIndex == slides.length) {
+                    slideIndex = 0;
+                }
+                showSlides(slideIndex);
+            }
+            function showSlides() {
+                const slides = document.getElementsByClassName("carousel-slide");
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slides[slideIndex].style.display = "block";
+            }
+
+            showSlides();
+        </script>
+
+    </body>
