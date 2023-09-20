@@ -20,7 +20,7 @@ body {
 }
 
 main {
-    margin-left: 5rem;
+    margin-left: 6rem;
     padding: 1rem;
 }
 
@@ -118,9 +118,11 @@ main {
 /* LARGE SCREENS */
 @media only screen and (min-width: 600px) {
     .navbar {
-        top: 0;
+        top: 1rem;
         width: 5rem;
-        height: 100vh;
+        height: fit-content;
+        border-radius: 1rem;
+        margin-left: 1rem;
     }
     .navbar:hover {
         width: 19rem;
@@ -170,6 +172,7 @@ main {
 
 .image_column img {
     width: 100%;
+    border-radius: 1rem;
 }
 
 .text_column {
