@@ -25,8 +25,8 @@ main {
 }
 
 .navbar {
-    width: 5rem;
-    height: 100vh;
+    /* width: 5rem;
+    height: 100vh; */
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
@@ -76,14 +76,14 @@ main {
     transition: var(--transition-speed);
 }
 
-.navbar:hover {
+/* .navbar:hover {
     width: 19rem;
-}
+} */
 
-.navbar:hover .link-text {
+/* .navbar:hover .link-text {
     visibility: visible;
     opacity: 1;
-}
+} */
 
 .logo_jpg {
     max-width: 2rem;
@@ -111,4 +111,46 @@ main {
 
 .navbar:hover .logo img {
     transform: rotate(-360deg);
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover {
+        width: 19rem;
+    }
+    .navbar:hover .link-text {
+        visibility: visible;
+        opacity: 1;
+    }
+    .nav-item:hover .link-text {
+        color: var(--text-secondary);
+        fill: var(--svg-secondary);
+        transition: var(--transition-speed);
+    }
+}
+
+/* SMALL SCREENS */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo {
+        display: none;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .nav-link {
+        justify-content: space-around;
+    }
+    main {
+        margin: 0;
+    }
 }
