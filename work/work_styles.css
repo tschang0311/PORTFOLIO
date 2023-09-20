@@ -57,9 +57,13 @@
     height: auto;
     padding-top: 10px;
 }
+.column img:hover {
+    transform: scale(.9, .9);
+}
 .column .image-container {
     position: relative;
     display: inline-block;
+    z-index: 100;
 }
 .column .image-caption {
     position: absolute;
