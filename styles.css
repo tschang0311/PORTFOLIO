@@ -74,6 +74,7 @@ main {
     color: var(--text-secondary);
     fill: var(--svg-secondary);
     transition: var(--transition-speed);
+    transform: translateY(-.5rem);
 }
 
 /* .navbar:hover {
