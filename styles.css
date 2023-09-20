@@ -1,7 +1,7 @@
 /* NAVIGATION BAR */
 :root {
     font-size: 16px;
-    font-family: 'Open Sans';
+    font-family: 'Space Mono';
     --text-primary: #ffffff;
     --text-secondary: #c21807;
     --bg-primary: #000000;
@@ -94,13 +94,14 @@ main {
 .logo {
     font-weight: bolder;
     text-transform: uppercase;
+    margin-left: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
     text-align: left;
     color: var(--text-primary);
-    font-size: 1.5rem;
-    letter-spacing: 0.3ch;
+    font-size: 1.7rem;
+    letter-spacing: -.1ch;
     width: 100%;
 }
 
@@ -153,4 +154,58 @@ main {
     main {
         margin: 0;
     }
+}
+
+.hero_container {
+    display: flex;
+    gap: .5rem;
+    align-items: flex-start;
+
+}
+
+.image_column {
+    flex: 2;
+}
+
+.image_column img {
+    width: 100%;
+}
+
+.text_column {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* margin-left: 5rem; */
+    height: calc(100vh + 7rem);
+}
+
+.hero_text {
+    margin-left: 5rem;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: -.1ch;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 7.5rem;
+    transition: var(--transition-speed) ease-in-out;
+}
+
+.hero_text:hover {
+    letter-spacing: -.08rem;
+}
+
+.line_1 {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line_2 {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
 }
